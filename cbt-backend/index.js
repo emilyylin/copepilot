@@ -10,10 +10,11 @@ app.use(express.json())
 app.post("/saveThoughtRecord", (req, res) => {
     const formData = req.body.formData
 
-    const filePath = path.join(__dirname, "thought_records.csv")
+    const filePath = "./thought_records.csv"
 
     const headers = "timestamp,situation,thought,behavior,emotions\n"
     
+    // TO DO: FLATTEN EMOTIONS :D
     const row = [
         Date.now(),
         formData.situation,
