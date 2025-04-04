@@ -7,11 +7,16 @@ import React, { useState } from "react"
 
 function TRPage () {
 
+    const url = process.env.NEXT_PUBLIC_BACKEND_API_URL
+
     const saveFormData = () => {
 
         // write to csv file
-        console.log(formData)
-
+        fetch(`${url}/saveThoughtRecord`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ formData }),
+        })
 
         // close form
         setFormVisible(false)
