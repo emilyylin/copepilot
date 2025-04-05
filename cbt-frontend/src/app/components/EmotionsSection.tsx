@@ -3,7 +3,7 @@
 import Emotion from "@/app/components/Emotion";
 
 import { Button } from "antd"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 function EmotionsSection ({formData, question, setFormData, saveFormData}) {
 

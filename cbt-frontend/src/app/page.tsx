@@ -1,22 +1,47 @@
 'use client';
 
 import TRForm from "@/app/components/TRForm"
+import TRCard from "@/app/components/TRCard";
+import type { ThoughtRecord } from "@/types/types";
+
 import { Button } from "antd"
 
-import React, { useState } from "react" 
+import React, { useState, useEffect } from "react" 
 
 const url = process.env.NEXT_PUBLIC_BACKEND_API_URL
 
 export default function Home() {
 
-    const saveFormData = () => {
+    const [ trcards, setTRCards ] = useState<ThoughtRecord[]>([])
 
-        // write to csv file
-        fetch(`${url}/saveThoughtRecord`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ formData }),
-        })
+    // load thought records on mount
+    // todo: make custom hooks
+    useEffect(() => {
+        const loadThoughtRecords = async () => {
+            try {
+                const res = await fetch(`${url}/thoughtRecords`)
+                const data = await res.json();
+                
+                setTRCards(data)
+
+            } catch ( err ) {
+                console.error("Failed to fetch thought records: ", err)
+            } 
+        }
+        loadThoughtRecords();
+    }, [])
+
+    const saveFormData = async () => {
+        // write to backend json
+        try {
+            await fetch(`${url}/saveThoughtRecord`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ formData }),
+            })
+        } catch ( err ) {
+            console.error("Failed to save thought record: ", err)
+        }
 
         // close form
         setFormVisible(false)
@@ -47,6 +72,12 @@ export default function Home() {
             </div>
             <div className="">
                 {formVisible && <TRForm formData={formData} setFormData={setFormData} saveFormData={saveFormData}/>}
+            </div>
+            <div className="">
+                {trcards.map((tr, i) => (
+                    <TRCard tr={tr} key={i}/>
+                ))}
+
             </div>
         </div>
     );

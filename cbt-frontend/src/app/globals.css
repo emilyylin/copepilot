@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --color-background: #FAFAFA;         
+    --color-foreground: #333333;
+  
+    --color-sky-teal: #A3E0DC;
+    --color-ocean-blue: #4BA2C9;
+    --color-soft-mint: #D3F3ED;
+    --color-heart-coral: #F7BFC4;
+  
+    --color-light-grey: #EAEAEA;
+    --color-mid-grey: #B0B0B0;
 }
 
 @theme inline {
@@ -19,8 +27,18 @@
   }
 }
 
+@layer base {
+    :root {
+      --font-sans: 'Open Sans', system-ui, sans-serif;
+    }
+  
+    body {
+      font-family: var(--font-sans);
+    }
+  }
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
 }

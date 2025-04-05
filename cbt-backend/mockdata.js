@@ -1,12 +1,7 @@
 const fs = require("fs")
 
-const fakeRow = (
-    timestamp,
-    situation,
-    thought,
-    behavior,
-    emotions
-    ) => `${timestamp},"${situation}","${thought}","${behavior}","${JSON.stringify(emotions)}"\n`
+const fakeRow = (timestamp, situation, thought, behavior, emotions) =>
+    `${timestamp},"${situation.replace(/"/g, '""')}","${thought.replace(/"/g, '""')}","${behavior.replace(/"/g, '""')}","${JSON.stringify(emotions).replace(/"/g, '""')}"\n`;
 
 // used chatgpt dkm
 const data = [
@@ -40,7 +35,7 @@ const data = [
     ),
   ];
 
-const filePath = "./cbt-backend/thought_records.csv"
+const filePath = "./cbt-backend/csv/thought_records.csv"
 const headers = "timestamp,situation,thought,behavior,emotions\n"
 
 fs.writeFileSync(filePath, headers + data.join(""))

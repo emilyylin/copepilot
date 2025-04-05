@@ -1,7 +1,7 @@
 'use client'
 
 import { Input } from "antd"
-import type { EmotionProps } from "@/app/types/types"
+import type { EmotionProps } from "@/types/types"
 
 function Emotion ({emotion, setEmotion}: EmotionProps) {
 
