@@ -1,5 +1,4 @@
 const fs = require("fs")
-const path = require("path")
 
 const fakeRow = (
     timestamp,
@@ -7,7 +6,7 @@ const fakeRow = (
     thought,
     behavior,
     emotions
-    ) => `${timestamp},${situation},${thought},${behavior},"${JSON.stringify(emotions)}"\n`
+    ) => `${timestamp},"${situation}","${thought}","${behavior}","${JSON.stringify(emotions)}"\n`
 
 // used chatgpt dkm
 const data = [

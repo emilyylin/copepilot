@@ -4,6 +4,12 @@ export type EmotionData = {
 };
 
 export type EmotionProps = {
-    emotion: EmotionData
+    emotion: EmotionData;
     setEmotion: (emotion: EmotionData) => void;
 }
+
+export type Message = {
+    role: 'user' | 'assisstant';
+    content: string;
+    date: Date;
+};
