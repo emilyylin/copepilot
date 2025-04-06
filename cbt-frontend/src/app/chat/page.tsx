@@ -16,7 +16,7 @@ function ChatBotPage () {
     // load message history on mount
     // TODO: create custom hook
     useEffect(() => {
-        const loadMessages = async () => {
+        const fetchMessages = async () => {
             try {
                 const res = await fetch(`${url}/messages`)
                 const data = await res.json();
@@ -27,7 +27,7 @@ function ChatBotPage () {
                 console.error("Failed to fetch thought records: ", err)
             } 
         }
-        loadMessages();
+        fetchMessages();
     }, [])
 
     const sendMessage = async () => {
@@ -83,8 +83,8 @@ function ChatBotPage () {
         <>
             <div className="flex flex-col">
                 <div className="flex flex-col gap-2">
-                    {messages.map((msg)=> 
-                        <ChatBubble msg={msg}/>
+                    {messages.map((msg, i)=> 
+                        <ChatBubble msg={msg} key={i}/>
                     )}
                     
                 </div>

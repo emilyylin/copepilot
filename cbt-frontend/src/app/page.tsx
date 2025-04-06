@@ -17,7 +17,7 @@ export default function Home() {
     // load thought records on mount
     // todo: make custom hooks
     useEffect(() => {
-        const loadThoughtRecords = async () => {
+        const fetchThoughtRecords = async () => {
             try {
                 const res = await fetch(`${url}/thoughtRecords`)
                 const data = await res.json();
@@ -28,7 +28,7 @@ export default function Home() {
                 console.error("Failed to fetch thought records: ", err)
             } 
         }
-        loadThoughtRecords();
+        fetchThoughtRecords();
     }, [])
 
     const saveFormData = async () => {

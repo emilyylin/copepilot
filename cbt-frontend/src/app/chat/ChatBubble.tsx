@@ -1,6 +1,6 @@
 
 
-function ChatBubble ({msg}) {
+function ChatBubble ({msg, key}) {
 
     const isUser = msg.role=="user" ? true : false
 

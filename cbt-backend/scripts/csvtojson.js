@@ -38,7 +38,12 @@ const cleaned = records.map((record) => {
 
     const out = {};
 
-    for (const key in record) {
+    for (const rawKey in record) {
+        const key = rawKey.trim().replace(/^\uFEFF/, "")
+
+        // we don't want to store embeddings in json
+        if (key === "embedding") continue
+
         const val = record[key];
 
         switch (key) {
@@ -65,10 +70,6 @@ const cleaned = records.map((record) => {
                 } catch {
                     out.user_context = String(val);
                 }
-            break;
-        
-        // we don't want to store embeddings in json
-        case "embedding":
             break;
 
         default:

@@ -21,3 +21,13 @@ export type ThoughtRecord = {
     situation: string;
     thought: string;
 }
+
+export type InsightSectionProps = {
+    title: string;
+    children: React.ReactNode;
+}
+
+export type TimeStats = {
+    days: Record<"Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday", number>;
+    time: number[]; // length 24 (one for each hour)
+}

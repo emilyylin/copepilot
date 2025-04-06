@@ -1,52 +1,52 @@
 [
   {
     "role": "user",
-    "content": "Hi #1",
-    "date": "2025-04-05T19:01:24.412595"
+    "content": "I can't stop overthinking everything I said in the meeting.",
+    "date": "2025-04-05T09:15:00.000Z"
   },
   {
     "role": "chatbot",
-    "content": "Hello! How can I help? #2",
-    "date": "2025-04-05T19:06:24.412595"
+    "content": "It sounds like you're experiencing some anxiety about how you were perceived. What makes you think you said something wrong?",
+    "date": "2025-04-05T09:15:10.000Z"
   },
   {
     "role": "user",
-    "content": "Hi #3",
-    "date": "2025-04-05T19:11:24.412595"
+    "content": "My manager didn’t smile. I felt like they were disappointed.",
+    "date": "2025-04-05T09:16:00.000Z"
   },
   {
     "role": "chatbot",
-    "content": "Hello! How can I help? #4",
-    "date": "2025-04-05T19:16:24.412595"
+    "content": "Facial expressions can be hard to interpret. Could there be other reasons for their reaction?",
+    "date": "2025-04-05T09:16:15.000Z"
   },
   {
     "role": "user",
-    "content": "Hi #5",
-    "date": "2025-04-05T19:21:24.412595"
+    "content": "Maybe... but I keep replaying it in my head.",
+    "date": "2025-04-05T09:17:00.000Z"
   },
   {
     "role": "chatbot",
-    "content": "Hello! How can I help? #6",
-    "date": "2025-04-05T19:26:24.412595"
+    "content": "That’s a sign of rumination — a common cognitive distortion. Want to try reframing it?",
+    "date": "2025-04-05T09:17:15.000Z"
   },
   {
     "role": "user",
-    "content": "Hi #7",
-    "date": "2025-04-05T19:31:24.412595"
+    "content": "Sure, I guess I could be overanalyzing.",
+    "date": "2025-04-05T09:18:00.000Z"
   },
   {
     "role": "chatbot",
-    "content": "Hello! How can I help? #8",
-    "date": "2025-04-05T19:36:24.412595"
+    "content": "That’s a good start. What’s a more balanced way to interpret the meeting?",
+    "date": "2025-04-05T09:18:15.000Z"
   },
   {
     "role": "user",
-    "content": "Hi #9",
-    "date": "2025-04-05T19:41:24.412595"
+    "content": "Maybe they were just distracted — not upset.",
+    "date": "2025-04-05T09:19:00.000Z"
   },
   {
     "role": "chatbot",
-    "content": "Hello! How can I help? #10",
-    "date": "2025-04-05T19:46:24.412595"
+    "content": "Exactly. That’s a more compassionate and realistic interpretation. Great work.",
+    "date": "2025-04-05T09:19:15.000Z"
   }
 ]
