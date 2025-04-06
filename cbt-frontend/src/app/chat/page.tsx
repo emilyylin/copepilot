@@ -56,7 +56,7 @@ function ChatBotPage () {
             const botMsg: Message = {
               role: "chatbot",
               content: data.chatbot_output,
-              date: new Date(),
+              date: Date.now(),
             };
           
             setMessages(prev => [...prev, botMsg]);

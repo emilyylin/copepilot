@@ -3,21 +3,24 @@
 import React from "react"
 import { Input } from "antd"
 
-function TRSection ({value, question, setValue}) {
+function TRFormCard ({value, question, setValue, placeholder, prompt}) {
     const { TextArea } = Input;
 
     return (
-        <>
-            {question}
+        <div className="py-3">
+            <p className="text-sm font-semibold">{question}</p>
+            <p className="pb-4 text-xs text-gray-400" >{prompt}</p>
+
             <TextArea 
                 rows={6}
                 maxLength={500}
                 value={value}
+                placeholder={placeholder}
                 onChange={(e) => setValue(e.target.value)}
             />
-        </>
+        </div>
     );
 
 }
 
-export default TRSection
+export default TRFormCard

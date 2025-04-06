@@ -1,27 +1,27 @@
 'use client'
 
 import { Input } from "antd"
-import type { EmotionProps } from "@/types/types"
 
-function Emotion ({emotion, setEmotion}: EmotionProps) {
+function Emotion ({emotion, setEmotion, ifNew, deleteEmotion, index}) {
 
     return (
-        <div className = "flex flex-row">
+        <div className = "flex flex-row gap-4 mb-4">
             <div className = "flex flex-col">
-                Emotion
                 <Input
                     value={emotion.label}
+                    placeholder="Emotion"
                     onChange={(e) => setEmotion({ ...emotion, label: e.target.value })}
                 />
             </div>
 
-            <div>
-                Intensity (%)
+            <div className = "flex flex-col">
                 <Input
                     value={emotion.intensity}
+                    placeholder="Intensity (%)"
                     onChange={(e) => setEmotion({ ...emotion, intensity: e.target.value })}
                 />
             </div>
+            {!ifNew && <button onClick={()=>deleteEmotion(index)}>🗑</button>}
         </div>
     );
 

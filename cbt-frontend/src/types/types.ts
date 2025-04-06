@@ -1,21 +1,22 @@
 export type EmotionData = {
     label: string;
-    intensity: number;
+    intensity: number | "";
 };
 
 export type EmotionProps = {
     emotion: EmotionData;
+    ifNew: boolean;
     setEmotion: (emotion: EmotionData) => void;
 }
 
 export type Message = {
     role: 'user' | 'chatbot';
     content: string;
-    date: Date;
+    date: number;
 };
 
 export type ThoughtRecord = {
-    timestamp: number;
+    timestamp?: number;
     behavior: string;
     emotions: EmotionData[];
     situation: string;

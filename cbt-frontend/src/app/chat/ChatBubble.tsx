@@ -1,6 +1,6 @@
 
 
-function ChatBubble ({msg, key}) {
+function ChatBubble ({msg}) {
 
     const isUser = msg.role=="user" ? true : false
 
@@ -11,8 +11,8 @@ function ChatBubble ({msg, key}) {
             <div
                 className={`max-w-fit px-4 py-1 rounded-full shadow-sm ${
                 isUser
-                    ? "bg-[var(--color-sky-teal)] text-[var(--color-foreground)]"
-                    : "bg-[var(--color-light-grey)] text-[var(--color-foreground)]"
+                    ? "bg-teal-200 text-gray-800"
+                    : "bg-gray-200 text-gray-800"
                 }`}
             >
                 {msg.content}
