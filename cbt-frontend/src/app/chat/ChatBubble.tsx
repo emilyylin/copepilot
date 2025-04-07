@@ -1,4 +1,4 @@
-
+import { Bot } from 'lucide-react'
 
 function ChatBubble ({msg}) {
 
@@ -6,10 +6,11 @@ function ChatBubble ({msg}) {
 
     return (
         <div
-            className={`flex ${isUser ? "justify-end" : "justify-start"}`}
+            className={`items-center gap-4 flex ${isUser ? "justify-end" : "justify-start"}`}
             >
+                {!isUser && < Bot />}
             <div
-                className={`max-w-fit px-4 py-1 rounded-full shadow-sm ${
+                className={` text-sm max-w-lg px-4 py-2 rounded-xl shadow-sm ${
                 isUser
                     ? "bg-teal-200 text-gray-800"
                     : "bg-gray-200 text-gray-800"
@@ -17,7 +18,7 @@ function ChatBubble ({msg}) {
             >
                 {msg.content}
             </div>
-            </div>
+        </div>
     );
 
 }

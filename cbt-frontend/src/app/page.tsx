@@ -35,23 +35,25 @@ export default function Home() {
     const [formVisible, setFormVisible] = useState(false)
 
     return (
-        <div className="flex flex-col px-15"> 
-            <div className="flex flex-row justify-between items-center">
-                < PageHeader/>
-                < button
-                    className="rounded-md border h-12 border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-teal-100 hover:border-0 hover:text-teal-800 transition-colors shadow-sm"
-                    onClick={()=>setFormVisible(true)}> 
-                        Add Thought Record
-                </button>
-            </div>
-        
-            <div className="">
-                {formVisible && <TRForm setVisible={setFormVisible} fetchTRs={fetchThoughtRecords}/>}
-            </div>
-            <div className="w-full max-w-7xl mx-auto">
-                <TRCardSection trcards={trcards}/>
-            </div>
+        <div className="flex h-screen">
+            <div className="flex flex-col flex-1 overflow-y-auto px-25 pb-20"> 
+                <div className="flex flex-row justify-between items-center">
+                    < PageHeader/>
+                    < button
+                        className="rounded-md border h-12 border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-teal-100 hover:border-0 hover:text-teal-800 transition-colors shadow-sm"
+                        onClick={()=>setFormVisible(true)}> 
+                            Add Thought Record
+                    </button>
+                </div>
             
+                <div className="">
+                    {formVisible && <TRForm setVisible={setFormVisible} fetchTRs={fetchThoughtRecords}/>}
+                </div>
+                <div className="w-full max-w-7xl mx-auto">
+                    <TRCardSection trcards={trcards}/>
+                </div>
+                
+            </div>
         </div>
     );
 }

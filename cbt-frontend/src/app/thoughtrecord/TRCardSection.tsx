@@ -1,12 +1,5 @@
 import TRCard from "@/app/thoughtrecord/TRCard";
-
-const colors = ["bg-red-100", "bg-blue-100", "bg-green-100", "bg-yellow-100", "bg-purple-100", "bg-pink-100"] as const
-type Color = typeof colors[number]
-
-const getRandomColor = (): Color => {
-  const index = Math.floor(Math.random() * colors.length)
-  return colors[index]
-}
+import { getRandomColor } from "@/utils/colors";
 
 function TRCardSection ({trcards}) {
 

@@ -1,26 +1,32 @@
 'use client'
 
+import { Bar, Doughnut } from 'react-chartjs-2'
+
 import {
-    ResponsiveContainer,
-    PieChart, 
-    Pie,
-    BarChart,
-    Bar,
-    XAxis,
-    YAxis,
+    Chart as ChartJS,
+    BarElement,
+    CategoryScale,
+    LinearScale,
     Tooltip,
-} from "recharts";
+    Legend,
+    ArcElement,
+} from 'chart.js'
 
 import React, { useEffect, useState } from "react"
 
-import InsightSection from "./component/insightSection"
+import Graph from "@/app/insights/component/Graph"
+import StatCard from "@/app/insights/component/StatCard";
+import PageHeader from "@/app/components/PageHeader"
 
-import type { TimeStats } from "@/types/types";
+import type { TimeStats } from "@/types/types"
+
+import { transformDistortionData, transformCoreBeliefData, transformDayAndHourData} from '@/utils/chart';
 
 const url = process.env.NEXT_PUBLIC_BACKEND_API_URL
 
-function InsightsPage () {
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend, ArcElement)
 
+function InsightsPage () {
 
     const [ distortionData, setDistortionData ] = useState<{ label: string; value: number }[]>([])
     const [ coreBeliefsData, setCoreBeliefsData ] = useState<{ label: string; value: number }[]>([])
@@ -35,106 +41,112 @@ function InsightsPage () {
           Sunday: 0,
         },
         time: Array(24).fill(0),
-      })
+    })
+
+    const fetchTime = async () => {
+        try {
+            const res = await fetch(`${url}/insights/daysOfWeek`)
+            const data = await res.json();
+
+            setTimeStats(data)
+
+        } catch ( err ) {
+            console.error("Failed to fetch time: ", err)
+        }
+    }
+
+    const fetchCoreBeliefs = async () => {
+        try {
+            const res = await fetch(`${url}/insights/coreBeliefFreq`)
+            const data = await res.json();
+
+            setCoreBeliefsData(data)
+
+        } catch ( err ) {
+            console.error("Failed to fetch core belief frequencies: ", err)
+        }
+    }
+
+    const fetchDistortions = async () => {
+        try {
+            const res = await fetch(`${url}/insights/distortionfreq`)
+            const data = await res.json();
+
+            setDistortionData(data)
+
+        } catch ( err ) {
+            console.error("Failed to fetch distortion frequencies: ", err)
+        } 
+    }
 
     // fetch data for graphs
     useEffect(() => {
-
-        const fetchTime = async () => {
-            try {
-                const res = await fetch(`${url}/insights/daysOfWeek`)
-                const data = await res.json();
-
-                setTimeStats(data)
-
-            } catch ( err ) {
-                console.error("Failed to fetch time: ", err)
-            }
-        }
-
-        const fetchCoreBeliefs = async () => {
-            try {
-                const res = await fetch(`${url}/insights/coreBeliefFreq`)
-                const data = await res.json();
-
-                setCoreBeliefsData(data)
-
-            } catch ( err ) {
-                console.error("Failed to fetch core belief frequencies: ", err)
-            }
-        }
-
-        const fetchDistortions = async () => {
-            try {
-
-                const res = await fetch(`${url}/insights/distortionfreq`)
-                const data = await res.json();
-
-                setDistortionData(data)
-
-            } catch ( err ) {
-                console.error("Failed to fetch distortion frequencies: ", err)
-            } 
-        }
-
         fetchTime();
         fetchDistortions();
         fetchCoreBeliefs();
-
     }, [])
-    
+
+    const distortionChartData = transformDistortionData(distortionData)
+    const pieChartData = transformCoreBeliefData(coreBeliefsData)
+    const { dayChartData , hourChartData } = transformDayAndHourData(timeStats)
 
     return (
-        <div className="flex flex-col h-150">
-            <InsightSection title="Most Frequent Cognitive Distortion">
-                <ResponsiveContainer width="50%" height={200}>
-                    <BarChart data={distortionData}>
-                        <XAxis dataKey="label" />
-                        <YAxis />
-                        <Tooltip />
-                        <Bar dataKey="value" />
-                    </BarChart>
-                </ResponsiveContainer>
-            </InsightSection>
+        <div className="flex h-screen">
+            <div className="flex flex-col flex-1 overflow-y-auto px-25 pb-20"> 
+            < PageHeader/>
 
-            <InsightSection title="Core Beliefs Visualization">
-                <ResponsiveContainer width="50%" height={200}> 
-                    <PieChart>
-                        <Pie
-                            data={coreBeliefsData}
-                            dataKey="value"
-                            nameKey="label"
-                            outerRadius={80}
-                            fill="#8884d8"
-                        />
-                        <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
-            </InsightSection>
+            <div className="">
+                <Graph title="Most Frequent Cognitive Distortion">
+                    <Bar
+                        data={distortionChartData}     
+                        options={{
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: { titleFont: { size: 14 }, bodyFont: { size: 12 } }
+                            }
+                        }}
+                    />
+                </Graph>
+            </div>
 
-            <InsightSection title="Thought Records by Hour">
-                <ResponsiveContainer width="50%" height={200}>
-                    <BarChart data={timeStats.time.map((count, hour) => ({ hour: `${hour}:00`, count }))}>
-                    <XAxis dataKey="hour" />
-                    <YAxis />
-                    <Tooltip />
-                    <Bar dataKey="count" fill="#82ca9d" />
-                    </BarChart>
-                </ResponsiveContainer>
-            </InsightSection>
+            <Graph title="Core Beliefs Visualization">
+                <Doughnut
+                    data={pieChartData}     
+                    options={{
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { titleFont: { size: 14 }, bodyFont: { size: 12 } }
+                        }
+                    }}
+                />
+            </Graph>
 
-            <InsightSection title="Thought Records by Day">
-                <ResponsiveContainer width="50%" height={200}>
-                    <BarChart data={Object.entries(timeStats.days).map(([day, count]) => ({ day, count }))}>
-                    <XAxis dataKey="day" />
-                    <YAxis />
-                    <Tooltip />
-                    <Bar dataKey="count" fill="#8884d8" />
-                    </BarChart>
-                </ResponsiveContainer>
-            </InsightSection>
+            <Graph title="Thought Records by Hour">
+                <Bar
+                    data={hourChartData}     
+                    options={{
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { titleFont: { size: 14 }, bodyFont: { size: 12 } }
+                        }
+                    }}
+                />
+            </Graph>
+
+            <Graph title="Thought Records by Day">
+                <Bar
+                    data={dayChartData}     
+                    options={{
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { titleFont: { size: 14 }, bodyFont: { size: 12 } }
+                        }
+                    }}
+                />
+            </Graph>
 
 
+        </div>
         </div>
     )
 

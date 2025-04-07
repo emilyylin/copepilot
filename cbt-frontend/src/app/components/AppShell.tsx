@@ -3,10 +3,12 @@
 import NavbarItem from "@/app/components/NavbarItem"
 import { Home, MessageCircle, BarChart2 } from 'lucide-react'
 
+const iconProps = { size: 20, strokeWidth: 1.5 }
+
 const navItems = [
-    { label: 'Home', href: '/', icon:<Home />},
-    { label: 'Chat', href: '/chat', icon:<MessageCircle />},
-    { label: 'Insights', href: '/insights', icon:<BarChart2 />},
+    { label: 'Home', href: '/', icon:<Home {...iconProps}/>},
+    { label: 'Chat', href: '/chat', icon:<MessageCircle {...iconProps}/>},
+    { label: 'Insights', href: '/insights', icon:<BarChart2 {...iconProps}/>},
 ];
 
 function AppShell ({children}: {children:React.ReactNode}) {
@@ -14,10 +16,10 @@ function AppShell ({children}: {children:React.ReactNode}) {
     return (
 
         <div className="flex h-screen overflow-hidden">
-          <nav className="flex flex-col bg-white text-gray-800 px-5 justify-between shadow-md w-xs w-60 bg-white shadow-md border-r border-gray-100">
+          <nav className="flex flex-col bg-white text-gray-800 px-5 justify-between shadow-md w-2xs w-60 bg-white shadow-md border-r border-gray-100">
             <div>
                 <div className="mt-6 flex items-center gap-3 pt-3 mb-4 ">
-                    <div className="flex items-center gap-2 text-xl font-bold mb-5">
+                    <div className="flex items-center gap-2 text-xl font-bold mb-5 pl-3">
                         <img src="/copepilot.png" alt="Copepilot logo" className="w-6 h-6" />
                         <span>Copepilot</span>
                     </div>
@@ -38,8 +40,8 @@ function AppShell ({children}: {children:React.ReactNode}) {
                 </div>
             </div>
           </nav>
-            <div className="flex flex-col flex-1 overflow-y-auto px-20 max-h-screen bg-gray-50">
-                <main className="flex-1 py-4">
+            <div className="flex flex-col flex-1 h-full bg-gray-50 overflow-hidden">
+                <main className="w-full">
                     {children}
                 </main>
             </div>
