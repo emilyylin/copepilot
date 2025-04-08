@@ -15,7 +15,7 @@ function NavbarItem ({href, label, icon}:{href: string, label: string, icon:Reac
             <Link
                 href={href}
                 className={`flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive ? 'bg-teal-100 text-teal-800' : 'text-gray-700 hover:bg-gray-100'
+                    isActive ? 'bg-[var(--color-green-hover)] text-[var(--color-highlight)]' : 'text-[var(--color-text-title)] hover:bg-[var(--color-soft-gray)]'
                   }`}
             >
                 <span className="text-xl">{icon}</span>

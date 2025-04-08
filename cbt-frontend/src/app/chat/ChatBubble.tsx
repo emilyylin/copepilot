@@ -10,10 +10,10 @@ function ChatBubble ({msg}) {
             >
                 {!isUser && < Bot />}
             <div
-                className={` text-sm max-w-lg px-4 py-2 rounded-xl shadow-sm ${
+                className={` text-sm max-w-lg px-4 py-2 rounded-xl shadow-md ${
                 isUser
-                    ? "bg-teal-200 text-gray-800"
-                    : "bg-gray-200 text-gray-800"
+                    ? "bg-[var(--color-soft-gray)]"
+                    : "bg-[var(--color-chat-blue)]"
                 }`}
             >
                 {msg.content}

@@ -1,4 +1,11 @@
-const colors = ["bg-red-100", "bg-blue-100", "bg-green-100", "bg-yellow-100", "bg-purple-100", "bg-pink-100"] as const
+const colors = [
+    "bg-[#e88c84]",   // coral red
+    "bg-[#b3c7e6]",   // dusty blue
+    "bg-[#a7d6aa]",   // sage green
+    "bg-[#f5cb80]",   // golden yellow
+    "bg-[#c1b5d0]",   // lavender gray
+    "bg-[#f2a7c1]"    // warm pink
+] as const;
 type Color = typeof colors[number]
 
 export const getRandomColor = (): Color => {
@@ -6,7 +13,14 @@ export const getRandomColor = (): Color => {
   return colors[index]
 }
 
-const chartColors = ["#feb2b2", "#fbd38d", "#faf089", "#9ae6b4", "#81e6d9", "#d6bcfa"] as const
+const chartColors = [
+    "#e88c84",   // coral red
+    "#b3c7e6",   // dusty blue
+    "#a7d6aa",   // sage green
+    "#f5cb80",   // golden yellow
+    "#c1b5d0",   // lavender gray
+    "#f2a7c1"    // warm pink
+] as const;
 type ChartColor = typeof chartColors[number]
 
 export const getRandomChartColor = () => {

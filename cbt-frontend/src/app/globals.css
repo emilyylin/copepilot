@@ -1,16 +1,23 @@
 @import "tailwindcss";
 
 :root {
-    --color-background: #FAFAFA;         
-    --color-foreground: #333333;
-  
-    --color-sky-teal: #A3E0DC;
-    --color-ocean-blue: #4BA2C9;
-    --color-soft-mint: #D3F3ED;
-    --color-heart-coral: #F7BFC4;
-  
-    --color-light-grey: #EAEAEA;
-    --color-mid-grey: #B0B0B0;
+    --color-background: #f7f6ef;
+    --color-foreground: #fffaf7;
+    --color-text-title: #642b26;
+    --color-text-primary: #4a4142;
+    --color-text-muted: #78716c;
+    --color-button: #ccbdb3;
+    --color-yellow: #f6e3b0;
+    --color-yellow-muted: #fefbf4;
+    --color-blue: #dee4ea;
+    --color-pink: #f2d3cf;
+    --color-light-pink: #f9efea;
+    --color-soft-gray: #e9e4e1;
+    --color-mint: #d3f3ed;
+    --color-highlight: #1e6b4e;
+    --color-green-hover: #d7e3dc;
+    --color-error-red: #e88c84;
+    --color-chat-blue: #b3c7e6
 }
 
 @theme inline {
@@ -29,12 +36,12 @@
 
 @layer base {
     :root {
-      --font-sans: 'Open Sans', system-ui, sans-serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
     }
   
     body {
       font-family: var(--font-sans);
-      color: #333333;
+      color: var(--color-text-primary);
     }
   }
 
@@ -45,13 +52,13 @@ body {
 }
 
 .custom-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: #14b8a6;
+    color: var(--color-highlight);
   }
   
 .custom-tabs .ant-tabs-ink-bar {
-background: #14b8a6; 
+    background: var(--color-highlight); 
 }
 
 .custom-tabs .ant-tabs-tab:hover .ant-tabs-tab-btn {
-    color: #A3E0DC
+    color: var(--color-green-hover)
 }

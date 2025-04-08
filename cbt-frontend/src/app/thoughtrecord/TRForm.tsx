@@ -150,9 +150,9 @@ function TRForm ({setVisible, fetchTRs}) {
 
     return (
         <div className="fixed inset-0 z-50 bg-black/30 flex items-center justify-center">
-            <div className="bg-white rounded-xl shadow-xl p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto">
+            <div className="bg-[var(--color-foreground)] rounded-xl shadow-xl p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto">
                 <div className="flex justify-end"> 
-                    <button className="rounded-md bg-gray-200 w-6 h-6 text-center font-semibold hover:bg-red-300 transition-colors text-gray-500" onClick={cancel}> x </button>
+                    <button className="rounded-md bg-[var(--color-background)] w-6 h-6 text-center font-semibold hover:bg-[var(--color-error-red)] transition-colors" onClick={cancel}> x </button>
                 </div>
                 <div className="flex flex-col mx-5 gap-5">
                     <Tabs defaultActiveKey="0" items={items} className="custom-tabs"/>

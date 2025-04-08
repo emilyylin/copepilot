@@ -16,10 +16,10 @@ function AppShell ({children}: {children:React.ReactNode}) {
     return (
 
         <div className="flex h-screen overflow-hidden">
-          <nav className="flex flex-col bg-white text-gray-800 px-5 justify-between shadow-md w-2xs w-60 bg-white shadow-md border-r border-gray-100">
+          <nav className="flex flex-col bg-[var(--color-yellow-muted)] text-[var(--color-text-primary)] px-5 justify-between shadow-md w-2xs w-60 bg-white shadow-md border-r-2 border-gray-100">
             <div>
                 <div className="mt-6 flex items-center gap-3 pt-3 mb-4 ">
-                    <div className="flex items-center gap-2 text-xl font-bold mb-5 pl-3">
+                    <div className="flex items-center gap-2 text-xl text-[var(--color-highlight)] font-bold mb-5 pl-3">
                         <img src="/copepilot.png" alt="Copepilot logo" className="w-6 h-6" />
                         <span>Copepilot</span>
                     </div>
@@ -30,17 +30,17 @@ function AppShell ({children}: {children:React.ReactNode}) {
                     ))}
                 </ul>
             </div>
-            <div className="flex items-center gap-3 border-t pt-4 border-gray-300 pb-5">
-                <div className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center text-white font-bold text-sm">
+            <div className="flex items-center gap-3 border-t pt-4 border-[var(--color-soft-gray)] pb-5">
+                <div className="h-8 w-8 bg-[var(--color-background)] rounded-full flex items-center justify-center text-white font-bold text-sm">
                     E
                 </div>
                 <div className="text-sm">
-                    <p className="font-medium text-gray-800 font-semibold">Emily</p>
-                    <p className="text-gray-500 text-xs">Not signed in</p>
+                    <p className="font-medium font-semibold">Emily</p>
+                    <p className="text-xs">Not signed in</p>
                 </div>
             </div>
           </nav>
-            <div className="flex flex-col flex-1 h-full bg-gray-50 overflow-hidden">
+            <div className="flex flex-col flex-1 h-full bg-[var(--color-foreground)] text-[var(--color-text-primary)] overflow-hidden">
                 <main className="w-full">
                     {children}
                 </main>

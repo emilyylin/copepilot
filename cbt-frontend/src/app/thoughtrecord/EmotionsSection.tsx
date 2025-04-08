@@ -5,8 +5,9 @@ import Emotion from "@/app/thoughtrecord/Emotion";
 function EmotionsSection ({formData, question, setFormData, newEmotion, setNewEmotion, addEmotion, deleteEmotion}) {
 
     return (
-        <div className="py-3">
-            <p className="pb-4 font-semibold">{question}</p>
+        <div className="flex flex-col gap-1 py-2">
+            <p className="text-lg font-semibold text-[var(--color-text-title)]">{question}</p>
+            <p className="pb-4 text-xs text-[var(--color-text-muted)]" >Jot down your emotion and their intensity (ex. Anxious 100%)</p>
 
             <Emotion key={0} ifNew={true} emotion={newEmotion} setEmotion={setNewEmotion} deleteEmotion={()=>deleteEmotion(0)}/>
 
@@ -28,7 +29,7 @@ function EmotionsSection ({formData, question, setFormData, newEmotion, setNewEm
                     />
             ))}
 
-            <span onClick={addEmotion} className="text-teal-600 border-b-2 cursor-pointer hover:text-teal-800 transition-all" > + Add Emotion </span>
+            <span onClick={addEmotion} className="text-[var(--color-highlight)] cursor-pointer hover:text-[var(--color-green-hover)] transition-all" > + Add Emotion </span>
         </div>
     );
 }

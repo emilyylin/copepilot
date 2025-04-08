@@ -53,15 +53,9 @@ function ChatBotPage () {
         }
     }
 
-    // load message history on mount
-    // TODO: create custom hook
-    useEffect(() => {
-        fetchMessages();
-    }, [])
-
     const sendMessage = async () => {
 
-        const newMsg:Message = {role:'user', content: value, date: new Date()}
+        const newMsg:Message = {role:'user', content: value, date: Date.now()}
         setMessages(prev => [...prev, newMsg])
         await saveMessage(newMsg)
         setValue('')
@@ -73,6 +67,12 @@ function ChatBotPage () {
         }
     }
 
+    // load message history on mount
+    // TODO: create custom hook
+    useEffect(() => {
+        fetchMessages();
+    }, [])
+
     // slides down to current message
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -82,9 +82,13 @@ function ChatBotPage () {
 
         <div className="flex flex-col h-screen"> 
             <div className="flex flex-col w-[70rem] h-[48rem] bg-white shadow-sm rounded-xl m-auto">
-            <div className="border-b-2 p-4 border-gray-100 text-lg font-semibold ">
-                AI Chat
-            </div>
+                <div className="flex flex-col border-b-2 border-[var(--color-soft-gray)] p-4 pl-5 ">
+                    <div className="text-lg font-semibold ">
+                        Chat with CopePilot
+                    </div>
+                    <div className="text-[var(--color-text-muted)] text-sm">Tell me how you're feeling.</div>
+                </div>
+            
             <div className="flex-1 flex flex-col overflow-y-auto px-10 py-8 space-y-4 ">
                 {messages.map((msg, i)=> 
                     <ChatBubble msg={msg} key={i}/>
@@ -92,7 +96,7 @@ function ChatBotPage () {
                 <div ref={bottomRef} />
             </div>
 
-            <div className="border-t-2 p-4 border-gray-100 p-4">
+            <div className="border-t-2 p-4 border-[var(--color-soft-gray)] p-4">
                 <div className="flex gap-2">
                     <Input
                         defaultValue="Type your message here ..."
@@ -100,7 +104,7 @@ function ChatBotPage () {
                         onChange={(e) => setValue(e.target.value)}
                     />
                     <button 
-                        className="text-sm text-center w-auto inline-block px-4 py-2 rounded-xl text-black bg-teal-200 border-teal-200 border transition hover:bg-teal-300 hover:border-teal-300 hover:text-black"
+                        className="text-sm text-center w-auto inline-block px-4 py-2 rounded-xl bg-[var(--color-blue)] border-[var(--color-soft-gray)] border transition hover:bg-[var(--color-highlight)] hover:text-white"
                         onClick={sendMessage}
                         >
                         <Send size={20} strokeWidth={1.5} />
