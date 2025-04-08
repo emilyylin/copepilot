@@ -18,6 +18,7 @@ I am building that now to complete the loop and to make the reflection actually 
 
 **Frontend:** Next.js + TypeScript
 **Backend:** Foundry & AIP (but typescript for my mock backend)
+**Libraries:** Chart.js, AntD
 
 ## Next Steps
 - **Add Responsibility Pie feature**  
