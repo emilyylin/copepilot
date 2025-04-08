@@ -1,11 +1,11 @@
-role,content,date
-user,"I can't stop overthinking everything I said in the meeting.",2025-04-05T09:15:00.000Z
-chatbot,"It sounds like you're experiencing some anxiety about how you were perceived. What makes you think you said something wrong?",2025-04-05T09:15:10.000Z
-user,"My manager didn’t smile. I felt like they were disappointed.",2025-04-05T09:16:00.000Z
-chatbot,"Facial expressions can be hard to interpret. Could there be other reasons for their reaction?",2025-04-05T09:16:15.000Z
-user,"Maybe... but I keep replaying it in my head.",2025-04-05T09:17:00.000Z
-chatbot,"That’s a sign of rumination — a common cognitive distortion. Want to try reframing it?",2025-04-05T09:17:15.000Z
-user,"Sure, I guess I could be overanalyzing.",2025-04-05T09:18:00.000Z
-chatbot,"That’s a good start. What’s a more balanced way to interpret the meeting?",2025-04-05T09:18:15.000Z
-user,"Maybe they were just distracted — not upset.",2025-04-05T09:19:00.000Z
-chatbot,"Exactly. That’s a more compassionate and realistic interpretation. Great work.",2025-04-05T09:19:15.000Z
+role,content,timestamp,order
+user,I can't stop overthinking everything I said in the meeting.,1743844500000,0
+chatbot,It sounds like you're experiencing some anxiety about how you were perceived. What makes you think you said something wrong?,1743844510000,1
+user,My manager didn’t smile. I felt like they were disappointed.,1743844560000,2
+chatbot,Facial expressions can be hard to interpret. Could there be other reasons for their reaction?,1743844575000,3
+user,Maybe... but I keep replaying it in my head.,1743844620000,4
+chatbot,That’s a sign of rumination — a common cognitive distortion. Want to try reframing it?,1743844635000,5
+user,"Sure, I guess I could be overanalyzing.",1743844680000,6
+chatbot,That’s a good start. What’s a more balanced way to interpret the meeting?,1743844695000,7
+user,Maybe they were just distracted — not upset.,1743844740000,8
+chatbot,Exactly. That’s a more compassionate and realistic interpretation. Great work.,1743844755000,9

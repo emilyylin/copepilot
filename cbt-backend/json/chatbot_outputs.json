@@ -1,0 +1,37 @@
+[
+  {
+    "msg_content": "This sounds similar to what you wrote earlier — that people looked tired or distracted, and you assumed they thought you weren’t good enough. That’s a form of mind reading — a common cognitive distortion. Want to try reframing that?",
+    "uuid": "msg_ad279313-be99-4009-9aa8-ef04018d659d",
+    "role": "chatbot",
+    "timestamp": 1743844510000,
+    "user_input": "I can't stop overthinking everything I said."
+  },
+  {
+    "msg_content": "Facial expressions can be hard to interpret. Could there be other reasons for their reaction?",
+    "uuid": "msg_c5a118d8-7f4d-4e0c-96c1-7707ceec78c6",
+    "role": "chatbot",
+    "timestamp": 1743844575000,
+    "user_input": "My manager didn't smile. I felt like they were upset."
+  },
+  {
+    "msg_content": "That's a sign of rumination — a common cognitive distortion. Want to try reframing it?",
+    "uuid": "msg_120e93c2-2bce-42da-8ad1-7cf614ab870e",
+    "role": "chatbot",
+    "timestamp": 1743844635000,
+    "user_input": "Maybe... but I keep replaying it in my head."
+  },
+  {
+    "msg_content": "That's a good start. What’s a more balanced way to interpret the meeting?",
+    "uuid": "msg_e1dd823f-861d-4129-b413-ff5c1b0d1a67",
+    "role": "chatbot",
+    "timestamp": 1743844695000,
+    "user_input": "Sure, I guess I could be overanalyzing."
+  },
+  {
+    "msg_content": "Exactly. That's a more compassionate and realistic interpretation. Great work.",
+    "uuid": "msg_870bc85c-62fa-4bb9-a1b3-e9464c1ed8ad",
+    "role": "chatbot",
+    "timestamp": 1743844755000,
+    "user_input": "Maybe they were just distracted — not upset with you."
+  }
+]

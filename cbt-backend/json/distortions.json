@@ -1,0 +1,284 @@
+[
+  {
+    "text": "Personalization 0.8 : The user feels that their mistakes are a reflection of their overall competence",
+    "type": "distortion",
+    "label": "Personalization",
+    "timestamp": 1744118314000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes that the team is talking about them negatively without any evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1744185587000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes others are disappointed without evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1743952787000
+  },
+  {
+    "text": "All-or-Nothing Thinking 0.9 : The user believes they either do everything right or they never get things right",
+    "type": "distortion",
+    "label": "All-or-Nothing Thinking",
+    "timestamp": 1744118314000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They assume something small went terribly wrong",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1743952787000
+  },
+  {
+    "text": "Personalization 0.8 : The user attributes the team's silence and lack of response to their own perceived failures",
+    "type": "distortion",
+    "label": "Personalization",
+    "timestamp": 1743897911000
+  },
+  {
+    "text": "Overgeneralization 0.7 : The user generalizes their feelings of inadequacy to the belief that they mess everything up",
+    "type": "distortion",
+    "label": "Overgeneralization",
+    "timestamp": 1743893385000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They are assuming that a lack of attention from someone equates to a significant failure in their competence",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1744267941000
+  },
+  {
+    "text": "All-or-Nothing Thinking 0.7 : The user feels that because they struggled, they are completely inadequate for the team",
+    "type": "distortion",
+    "label": "All-or-Nothing Thinking",
+    "timestamp": 1744224667000
+  },
+  {
+    "text": "Overgeneralization 0.7 : The user concludes that because of one incident, they mess everything up, applying it to all situations",
+    "type": "distortion",
+    "label": "Overgeneralization",
+    "timestamp": 1743897911000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes that others think they are incompetent without any direct evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1744267941000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They believe that making a mistake will lead to significant negative consequences",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1743993095000
+  },
+  {
+    "text": "Personalization 0.7 : The user feels responsible for the perception of being micromanaged, attributing it to their own actions",
+    "type": "distortion",
+    "label": "Personalization",
+    "timestamp": 1744189617000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes others are talking about them negatively without any evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1743993095000
+  },
+  {
+    "text": "All-or-Nothing Thinking 0.7 : The user believes they mess everything up, indicating a black-and-white view of their performance",
+    "type": "distortion",
+    "label": "All-or-Nothing Thinking",
+    "timestamp": 1744204845000
+  },
+  {
+    "text": "Should Statements 0.7 : The user believes they shouldn't be on the project, implying a rigid expectation of where they should be",
+    "type": "distortion",
+    "label": "Should Statements",
+    "timestamp": 1744141705000
+  },
+  {
+    "text": "Mind Reading 0.8 : The user assumes that the other person is not paying attention without confirming their thoughts or feelings",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1744204845000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They believe that minor mistakes will lead to a complete loss of trust from others",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1744143565000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes others think they are incompetent and have lost faith in them without any direct evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1744143565000
+  },
+  {
+    "text": "Should Statements 0.6 : The user expresses a belief that they shouldn't be on the project, implying a rigid standard for their involvement",
+    "type": "distortion",
+    "label": "Should Statements",
+    "timestamp": 1744204845000
+  },
+  {
+    "text": "Overgeneralization 0.7 : The user generalizes their feelings of struggle to everyone else, assuming that everyone sees them in a negative light",
+    "type": "distortion",
+    "label": "Overgeneralization",
+    "timestamp": 1744143565000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes others have lost faith in them without any direct evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1744074772000
+  },
+  {
+    "text": "Overgeneralization 0.7 : The user generalizes their experience from a rough 1:1 to a belief that they are always failing",
+    "type": "distortion",
+    "label": "Overgeneralization",
+    "timestamp": 1744213631000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes others think they are incompetent without any direct evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1743902857000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They believe that their mistakes will lead to a complete loss of trust from others",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1744074772000
+  },
+  {
+    "text": "All-or-Nothing Thinking 0.7 : The user expresses that they 'never get things right' and 'mess everything up,' indicating a black-and-white perspective",
+    "type": "distortion",
+    "label": "All-or-Nothing Thinking",
+    "timestamp": 1744074772000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes that everyone sees and judges their struggles without evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1743817471000
+  },
+  {
+    "text": "Overgeneralization 0.7 : The user states 'I never get things right,' which generalizes one experience to all situations",
+    "type": "distortion",
+    "label": "Overgeneralization",
+    "timestamp": 1743902857000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They believe that their struggles will lead to significant negative consequences",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1743817471000
+  },
+  {
+    "text": "All-or-Nothing Thinking 0.8 : The user believes they never get things right, indicating a black-and-white perspective",
+    "type": "distortion",
+    "label": "All-or-Nothing Thinking",
+    "timestamp": 1744213631000
+  },
+  {
+    "text": "Mind Reading 0.8 : The user assumes they are being micromanaged without evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1744141705000
+  },
+  {
+    "text": "All-or-Nothing Thinking 0.8 : The user believes that because they struggled, they are completely inadequate compared to the team",
+    "type": "distortion",
+    "label": "All-or-Nothing Thinking",
+    "timestamp": 1744185587000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They believe that their struggles and mistakes will lead to severe negative consequences",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1743893385000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes others are talking about them and judging them without any evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1743893385000
+  },
+  {
+    "text": "Should Statements 0.7 : The user expresses a belief that they 'shouldn't' be on the project, indicating a rigid expectation of themselves",
+    "type": "distortion",
+    "label": "Should Statements",
+    "timestamp": 1743799599000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They believe that a single instance of perceived failure has led to a complete loss of faith from others",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1743902857000
+  },
+  {
+    "text": "Personalization 0.9 : The user takes responsibility for the team's actions and feels they are wasting everyone's time",
+    "type": "distortion",
+    "label": "Personalization",
+    "timestamp": 1743948158000
+  },
+  {
+    "text": "Personalization 0.8 : The user believes they are wasting everyone's time, attributing the team's potential frustration solely to their own actions",
+    "type": "distortion",
+    "label": "Personalization",
+    "timestamp": 1744224667000
+  },
+  {
+    "text": "Catastrophizing 0.8 : The user assumes that their actions are a significant burden to the team without evidence",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1743799599000
+  },
+  {
+    "text": "All-or-Nothing Thinking 0.7 : The user believes they are either fully competent or completely inadequate, without recognizing any middle ground",
+    "type": "distortion",
+    "label": "All-or-Nothing Thinking",
+    "timestamp": 1743799599000
+  },
+  {
+    "text": "Catastrophizing 0.7 : They believe that not asking for help and re-reading messages leads to significant negative outcomes",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1743948158000
+  },
+  {
+    "text": "All-or-Nothing Thinking 0.6 : The user believes they are either fully competent or falling behind, with no middle ground",
+    "type": "distortion",
+    "label": "All-or-Nothing Thinking",
+    "timestamp": 1744189617000
+  },
+  {
+    "text": "Mind Reading 0.8 : The user assumes the team is ignoring their PR due to personal failure without evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1743948158000
+  },
+  {
+    "text": "Mind Reading 0.9 : The user assumes others think they are incompetent without any direct evidence",
+    "type": "distortion",
+    "label": "Mind Reading",
+    "timestamp": 1743923143000
+  },
+  {
+    "text": "Catastrophizing 0.8 : They believe that their actions are wasting everyone's time, implying a worst-case scenario",
+    "type": "distortion",
+    "label": "Catastrophizing",
+    "timestamp": 1743923143000
+  },
+  {
+    "text": "Labeling 0.7 : The user labels themselves as incompetent based on their perceived failures",
+    "type": "distortion",
+    "label": "Labeling",
+    "timestamp": 1743923143000
+  },
+  {
+    "text": "Personalization 0.8 : The user takes the team's lack of response personally, believing it reflects their worth or abilities",
+    "type": "distortion",
+    "label": "Personalization",
+    "timestamp": 1743799599000
+  }
+]

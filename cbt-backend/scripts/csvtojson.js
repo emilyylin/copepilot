@@ -44,37 +44,40 @@ const cleaned = records.map((record) => {
         // we don't want to store embeddings in json
         if (key === "embedding") continue
 
-        const val = record[key];
+        const val = record[rawKey];
 
         switch (key) {
-        case "timestamp":
-            out.timestamp = Number(val);
-            break;
+            case "text":
+                out.text = String(val).trim().replace(/\.$/, '')
+                break;
+            case "timestamp":
+                out.timestamp = Number(val);
+                break;
 
-        case "emotions":
-            if (typeof val === "string" && val.startsWith("[{")) {
-                try {
-                    out.emotions = JSON.parse(val);
-                } catch {
+            case "emotions":
+                if (typeof val === "string" && val.startsWith("[{")) {
+                    try {
+                        out.emotions = JSON.parse(val);
+                    } catch {
+                        out.emotions = [];
+                    }
+                } else {
                     out.emotions = [];
                 }
-            } else {
-                out.emotions = [];
+                break;
+
+            case "user_context":
+                try {
+                    const parsed = JSON.parse(val);
+                        out.user_context = Array.isArray(parsed) ? parsed.join(" ") : String(val);
+                    } catch {
+                        out.user_context = String(val);
+                    }
+                break;
+
+            default:
+                out[key] = val;
             }
-            break;
-
-        case "user_context":
-            try {
-                const parsed = JSON.parse(val);
-                    out.user_context = Array.isArray(parsed) ? parsed.join(" ") : String(val);
-                } catch {
-                    out.user_context = String(val);
-                }
-            break;
-
-        default:
-            out[key] = val;
-        }
     }
 
     return out;

@@ -30,7 +30,7 @@ function InsightsPage () {
 
     const [ distortionData, setDistortionData ] = useState<{ label: string; value: number }[]>([])
     const [ coreBeliefsData, setCoreBeliefsData ] = useState<{ label: string; value: number }[]>([])
-    const [timeStats, setTimeStats] = useState<TimeStats>({
+    const [ timeStats, setTimeStats ] = useState<TimeStats>({
         days: {
           Monday: 0,
           Tuesday: 0,
@@ -57,7 +57,7 @@ function InsightsPage () {
 
     const fetchCoreBeliefs = async () => {
         try {
-            const res = await fetch(`${url}/insights/coreBeliefFreq`)
+            const res = await fetch(`${url}/insights/cbfreq`)
             const data = await res.json();
 
             setCoreBeliefsData(data)
@@ -130,7 +130,7 @@ function InsightsPage () {
                     </div>
 
                     <div className="flex flex-row justify-between gap-10">
-                        <div className="flex-grow">
+                        <div className="flex-grow sm:max-w-[50%]">
                             <Graph title="Thought Records by Hour"  insight="dfds">
                                 <Bar
                                     data={hourChartData}     
@@ -143,7 +143,7 @@ function InsightsPage () {
                                 />
                             </Graph>
                         </div>
-                        <div className="flex-grow">
+                        <div className="flex-grow sm:max-w-[50%]">
                             <Graph title="Thought Records by Day"  insight="dsfds">
                                 <Bar
                                     data={dayChartData}     

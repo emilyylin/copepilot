@@ -21,7 +21,6 @@ const chartColors = [
     "#c1b5d0",   // lavender gray
     "#f2a7c1"    // warm pink
 ] as const;
-type ChartColor = typeof chartColors[number]
 
 export const getRandomChartColor = () => {
     const index = Math.floor(Math.random() * chartColors.length)

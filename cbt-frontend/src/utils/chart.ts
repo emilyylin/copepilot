@@ -44,7 +44,8 @@ export function transformDayAndHourData(raw: { days: Record<string, number>, tim
                 {
                     label: 'Thought Records by Day',
                     data: dayValues,
-                    backgroundColor: getRandomChartColor()
+                    borderRadius: 6,
+                    backgroundColor: dayValues.map(() => getRandomChartColor())
                 }
             ]
             },
@@ -54,7 +55,8 @@ export function transformDayAndHourData(raw: { days: Record<string, number>, tim
                     {
                     label: 'Thought Records by Hour',
                     data: hourValues,
-                    backgroundColor: getRandomChartColor()
+                    borderRadius: 6,
+                    backgroundColor: hourValues.map(() => getRandomChartColor())
                     }
                 ]
         }

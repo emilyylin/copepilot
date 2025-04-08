@@ -1,0 +1,48 @@
+﻿text,type,label,timestamp
+Personalization 0.8 : The user feels that their mistakes are a reflection of their overall competence.,distortion,Personalization,1744118314000
+Mind Reading 0.9 : The user assumes that the team is talking about them negatively without any evidence.,distortion,Mind Reading,1744185587000
+Mind Reading 0.9 : The user assumes others are disappointed without evidence.,distortion,Mind Reading,1743952787000
+All-or-Nothing Thinking 0.9 : The user believes they either do everything right or they never get things right.,distortion,All-or-Nothing Thinking,1744118314000
+Catastrophizing 0.8 : They assume something small went terribly wrong.,distortion,Catastrophizing,1743952787000
+Personalization 0.8 : The user attributes the team's silence and lack of response to their own perceived failures.,distortion,Personalization,1743897911000
+Overgeneralization 0.7 : The user generalizes their feelings of inadequacy to the belief that they mess everything up.,distortion,Overgeneralization,1743893385000
+Catastrophizing 0.8 : They are assuming that a lack of attention from someone equates to a significant failure in their competence.,distortion,Catastrophizing,1744267941000
+"All-or-Nothing Thinking 0.7 : The user feels that because they struggled, they are completely inadequate for the team.",distortion,All-or-Nothing Thinking,1744224667000
+"Overgeneralization 0.7 : The user concludes that because of one incident, they mess everything up, applying it to all situations.",distortion,Overgeneralization,1743897911000
+Mind Reading 0.9 : The user assumes that others think they are incompetent without any direct evidence.,distortion,Mind Reading,1744267941000
+Catastrophizing 0.8 : They believe that making a mistake will lead to significant negative consequences.,distortion,Catastrophizing,1743993095000
+"Personalization 0.7 : The user feels responsible for the perception of being micromanaged, attributing it to their own actions.",distortion,Personalization,1744189617000
+Mind Reading 0.9 : The user assumes others are talking about them negatively without any evidence.,distortion,Mind Reading,1743993095000
+"All-or-Nothing Thinking 0.7 : The user believes they mess everything up, indicating a black-and-white view of their performance.",distortion,All-or-Nothing Thinking,1744204845000
+"Should Statements 0.7 : The user believes they shouldn't be on the project, implying a rigid expectation of where they should be.",distortion,Should Statements,1744141705000
+Mind Reading 0.8 : The user assumes that the other person is not paying attention without confirming their thoughts or feelings.,distortion,Mind Reading,1744204845000
+Catastrophizing 0.8 : They believe that minor mistakes will lead to a complete loss of trust from others.,distortion,Catastrophizing,1744143565000
+Mind Reading 0.9 : The user assumes others think they are incompetent and have lost faith in them without any direct evidence.,distortion,Mind Reading,1744143565000
+"Should Statements 0.6 : The user expresses a belief that they shouldn't be on the project, implying a rigid standard for their involvement.",distortion,Should Statements,1744204845000
+"Overgeneralization 0.7 : The user generalizes their feelings of struggle to everyone else, assuming that everyone sees them in a negative light.",distortion,Overgeneralization,1744143565000
+Mind Reading 0.9 : The user assumes others have lost faith in them without any direct evidence.,distortion,Mind Reading,1744074772000
+Overgeneralization 0.7 : The user generalizes their experience from a rough 1:1 to a belief that they are always failing.,distortion,Overgeneralization,1744213631000
+Mind Reading 0.9 : The user assumes others think they are incompetent without any direct evidence.,distortion,Mind Reading,1743902857000
+Catastrophizing 0.8 : They believe that their mistakes will lead to a complete loss of trust from others.,distortion,Catastrophizing,1744074772000
+"All-or-Nothing Thinking 0.7 : The user expresses that they 'never get things right' and 'mess everything up,' indicating a black-and-white perspective.",distortion,All-or-Nothing Thinking,1744074772000
+Mind Reading 0.9 : The user assumes that everyone sees and judges their struggles without evidence.,distortion,Mind Reading,1743817471000
+"Overgeneralization 0.7 : The user states 'I never get things right,' which generalizes one experience to all situations.",distortion,Overgeneralization,1743902857000
+Catastrophizing 0.8 : They believe that their struggles will lead to significant negative consequences.,distortion,Catastrophizing,1743817471000
+"All-or-Nothing Thinking 0.8 : The user believes they never get things right, indicating a black-and-white perspective.",distortion,All-or-Nothing Thinking,1744213631000
+Mind Reading 0.8 : The user assumes they are being micromanaged without evidence.,distortion,Mind Reading,1744141705000
+"All-or-Nothing Thinking 0.8 : The user believes that because they struggled, they are completely inadequate compared to the team.",distortion,All-or-Nothing Thinking,1744185587000
+Catastrophizing 0.8 : They believe that their struggles and mistakes will lead to severe negative consequences.,distortion,Catastrophizing,1743893385000
+Mind Reading 0.9 : The user assumes others are talking about them and judging them without any evidence.,distortion,Mind Reading,1743893385000
+"Should Statements 0.7 : The user expresses a belief that they 'shouldn't' be on the project, indicating a rigid expectation of themselves.",distortion,Should Statements,1743799599000
+Catastrophizing 0.8 : They believe that a single instance of perceived failure has led to a complete loss of faith from others.,distortion,Catastrophizing,1743902857000
+Personalization 0.9 : The user takes responsibility for the team's actions and feels they are wasting everyone's time.,distortion,Personalization,1743948158000
+"Personalization 0.8 : The user believes they are wasting everyone's time, attributing the team's potential frustration solely to their own actions.",distortion,Personalization,1744224667000
+Catastrophizing 0.8 : The user assumes that their actions are a significant burden to the team without evidence.,distortion,Catastrophizing,1743799599000
+"All-or-Nothing Thinking 0.7 : The user believes they are either fully competent or completely inadequate, without recognizing any middle ground.",distortion,All-or-Nothing Thinking,1743799599000
+Catastrophizing 0.7 : They believe that not asking for help and re-reading messages leads to significant negative outcomes.,distortion,Catastrophizing,1743948158000
+"All-or-Nothing Thinking 0.6 : The user believes they are either fully competent or falling behind, with no middle ground.",distortion,All-or-Nothing Thinking,1744189617000
+Mind Reading 0.8 : The user assumes the team is ignoring their PR due to personal failure without evidence.,distortion,Mind Reading,1743948158000
+Mind Reading 0.9 : The user assumes others think they are incompetent without any direct evidence.,distortion,Mind Reading,1743923143000
+"Catastrophizing 0.8 : They believe that their actions are wasting everyone's time, implying a worst-case scenario.",distortion,Catastrophizing,1743923143000
+Labeling 0.7 : The user labels themselves as incompetent based on their perceived failures.,distortion,Labeling,1743923143000
+"Personalization 0.8 : The user takes the team's lack of response personally, believing it reflects their worth or abilities.",distortion,Personalization,1743799599000

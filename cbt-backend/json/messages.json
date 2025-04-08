@@ -1,52 +1,14 @@
 [
   {
     "role": "user",
-    "content": "I can't stop overthinking everything I said in the meeting.",
-    "date": "2025-04-05T09:15:00.000Z"
+    "content": "I can't stop overthinking everything I said.",
+    "date": 1744143923534,
+    "uuid": "msg_6f9c784c-c17c-485f-bc31-325e968428f7"
   },
   {
     "role": "chatbot",
-    "content": "It sounds like you're experiencing some anxiety about how you were perceived. What makes you think you said something wrong?",
-    "date": "2025-04-05T09:15:10.000Z"
-  },
-  {
-    "role": "user",
-    "content": "My manager didn’t smile. I felt like they were disappointed.",
-    "date": "2025-04-05T09:16:00.000Z"
-  },
-  {
-    "role": "chatbot",
-    "content": "Facial expressions can be hard to interpret. Could there be other reasons for their reaction?",
-    "date": "2025-04-05T09:16:15.000Z"
-  },
-  {
-    "role": "user",
-    "content": "Maybe... but I keep replaying it in my head.",
-    "date": "2025-04-05T09:17:00.000Z"
-  },
-  {
-    "role": "chatbot",
-    "content": "That’s a sign of rumination — a common cognitive distortion. Want to try reframing it?",
-    "date": "2025-04-05T09:17:15.000Z"
-  },
-  {
-    "role": "user",
-    "content": "Sure, I guess I could be overanalyzing.",
-    "date": "2025-04-05T09:18:00.000Z"
-  },
-  {
-    "role": "chatbot",
-    "content": "That’s a good start. What’s a more balanced way to interpret the meeting?",
-    "date": "2025-04-05T09:18:15.000Z"
-  },
-  {
-    "role": "user",
-    "content": "Maybe they were just distracted — not upset.",
-    "date": "2025-04-05T09:19:00.000Z"
-  },
-  {
-    "role": "chatbot",
-    "content": "Exactly. That’s a more compassionate and realistic interpretation. Great work.",
-    "date": "2025-04-05T09:19:15.000Z"
+    "content": "This sounds similar to what you wrote earlier — that people looked tired or distracted, and you assumed they thought you weren’t good enough. That’s a form of mind reading — a common cognitive distortion. Want to try reframing that?",
+    "date": 1744143923656,
+    "uuid": "msg_0a3533c9-d5f6-4293-aaac-b15ea3333ce6"
   }
 ]

@@ -79,7 +79,7 @@ function TRForm ({setVisible, fetchTRs}) {
             await fetch(`${url}/saveThoughtRecord`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ formData: record }),
+                body: JSON.stringify(record),
             })
 
             await fetchTRs()

@@ -61,6 +61,8 @@ function ChatBotPage () {
         setValue('')
 
         const botMsg = await getBotResponse(value)
+        // for now we save into the messages json, but don't need to in final product
+        // will be receiving msg from foundry, foundry will store message
         if (botMsg) {
             setMessages(prev => [...prev, botMsg])
             await saveMessage(botMsg)
@@ -75,6 +77,10 @@ function ChatBotPage () {
 
     // slides down to current message
     useEffect(() => {
+        // add message on mount
+        if (messages.length === 0) {
+            setMessages([{ role: 'chatbot', content: 'Hi! How can I help you?', date: Date.now() }])
+        }
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages]);
 
@@ -86,10 +92,10 @@ function ChatBotPage () {
                     <div className="text-lg font-semibold ">
                         Chat with CopePilot
                     </div>
-                    <div className="text-[var(--color-text-muted)] text-sm">Tell me how you're feeling.</div>
+                    <div className="text-[var(--color-text-muted)] text-sm">Tell me how you feel.</div>
                 </div>
             
-            <div className="flex-1 flex flex-col overflow-y-auto px-10 py-8 space-y-4 ">
+            <div className="flex-1 flex flex-col overflow-y-auto px-10 py-8 space-y-4">
                 {messages.map((msg, i)=> 
                     <ChatBubble msg={msg} key={i}/>
                 )}
@@ -99,9 +105,15 @@ function ChatBotPage () {
             <div className="border-t-2 p-4 border-[var(--color-soft-gray)] p-4">
                 <div className="flex gap-2">
                     <Input
-                        defaultValue="Type your message here ..."
+                        placeholder="Type your message here ..."
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" && !e.shiftKey) {
+                              e.preventDefault()
+                              sendMessage()
+                            }
+                        }}
                     />
                     <button 
                         className="text-sm text-center w-auto inline-block px-4 py-2 rounded-xl bg-[var(--color-blue)] border-[var(--color-soft-gray)] border transition hover:bg-[var(--color-highlight)] hover:text-white"

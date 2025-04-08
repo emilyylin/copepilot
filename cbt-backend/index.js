@@ -3,6 +3,7 @@ const fs = require("fs")
 const cors = require("cors")
 const { parseJson, writeToJson } = require("./utils/jsonutils")
 const { getNYCTimeData } = require("./utils/dateTimeUtils") 
+const { v4: uuidv4 } = require("uuid")
 
 const app = express()
 app.use(cors())
@@ -13,16 +14,23 @@ console.log("Backend server file has started");
 // TODO: split these up into controllers, routes files
 
 const thought_record_filepath = "./json/thought_records.json"
-const llm_output_filepath = "./json/LLM_Output.json"
-const analysis_filepath = "./json/TR_Analysis.json"
+const llm_output_filepath = "./json/chatbot_outputs.json"
+const cb_filepath = "./json/core_beliefs.json"
+const distortions_filepath ="./json/distortions.json"
 const message_filepath = "./json/messages.json"
 
 app.post("/saveThoughtRecord", (req, res) => {
     const tr = parseJson(thought_record_filepath)
-    tr.push(req.body.formData)
+    const id = 'tr_' + uuidv4()
+    const withID = {
+        ...req.body,
+        uuid: id,
+    };
+
+    tr.push(withID)
     
     try {
-        writeToJson(thought_record_filepath)
+        writeToJson(thought_record_filepath, tr)
         res.json({ message: "Thought Record saved! :)" })
     } catch (error) {
         console.error("Thought Record failed to save: ", error)
@@ -33,10 +41,17 @@ app.post("/saveThoughtRecord", (req, res) => {
 app.post("/saveMessage", (req, res) => {
 
     const messages = parseJson(message_filepath)
-    messages.push(req.body)
+
+    const id = 'msg_' + uuidv4()
+    const withID = {
+        ...req.body,
+        uuid: id,
+    };
+
+    messages.push(withID)
 
     try {
-        writeToJson(message_filepath)
+        writeToJson(message_filepath, messages)
         res.json({ message: "Message saved! :)" })
     } catch ( error ) {
         console.error("Message failed to save: ", error )
@@ -59,10 +74,10 @@ app.get("/llmResponse", (req, res) => {
     const match = llmData.find(temp => temp.user_input === input)
 
     if (!match) {
-        res.json({chatbot_output: "Hi! I'm listening."})
+        return res.json({chatbot_output: "I'm listening."})
     }
 
-    res.json({ chatbot_output: match.chatbot_output})
+    res.json({ chatbot_output: match.msg_content})
 
 })
 
@@ -71,30 +86,22 @@ app.get("/thoughtRecords", (_, res) => {
     res.json(tr)
 })
 
-app.get("/analysis", (_, res) => {
-    // cognitive distortions, core beliefs from foundry llm call
-    const analysis = parseJson(analysis_filepath)
-    res.json(analysis)
-})
-
 app.get("/messages", (_, res) => {
     //message history
     const messages = parseJson(message_filepath)
     res.json(messages)
 })
 
-app.get("/insights/distortionfreq", (_ ,res) => {
+app.get("/insights/distortionFreq", (_ ,res) => {
 
     // {label, value}
-    const analysis = parseJson(analysis_filepath)
+    const analysis = parseJson(distortions_filepath)
 
     const map={}
 
     // frequency map to count occurence of each distortion
     analysis.forEach((line) => {
-        if (line.type === "distortion") {
-            map[line.label] = (map[line.label] || 0) +1
-        }
+        map[line.label] = (map[line.label] || 0) +1
     })
 
     // change it to value that rechart wants :()
@@ -103,18 +110,16 @@ app.get("/insights/distortionfreq", (_ ,res) => {
 
 })
 
-app.get("/insights/coreBeliefFreq", (_, res) => {
+app.get("/insights/cbfreq", (_, res) => {
 
     // { label, value }
-    const analysis = parseJson(analysis_filepath)
+    const analysis = parseJson(cb_filepath)
 
     const map={}
 
     // frequency map to count occurence of each distortion
     analysis.forEach((line) => {
-        if (line.type === "core_beliefs") {
-            map[line.text] = (map[line.text] || 0) +1
-        }
+        map[line.text] = (map[line.text] || 0) +1
     })
 
     // change it to value that rechart wants :()
@@ -125,7 +130,7 @@ app.get("/insights/coreBeliefFreq", (_, res) => {
 
 app.get("/insights/daysOfWeek", (_, res) => {
 
-    const analysis = parseJson(analysis_filepath)
+    const analysis = parseJson(thought_record_filepath)
 
     const days = {
         Monday: 0,

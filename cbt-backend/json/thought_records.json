@@ -1,65 +1,305 @@
 [
   {
-    "timestamp": 1743782770089,
-    "situation": "Had a meeting with my manager and they looked distracted the whole time.",
-    "thought": "They must be disappointed in me. I probably messed something up again.",
-    "behavior": "Kept my responses short, avoided eye contact, left the call early.",
+    "order": "0",
+    "timestamp": 1744267941000,
+    "situation": "Met with someone who didn’t seem to pay attention. It was hard to focus the whole afternoon.",
+    "thought": "They think I’m incompetent.",
+    "behavior": "Went for a long walk instead of working. Went for a long walk instead of working. Avoided messages all afternoon.",
     "emotions": [
       {
-        "label": "anxiety",
+        "label": "overwhelm",
         "intensity": 8
       },
       {
         "label": "shame",
+        "intensity": 5
+      }
+    ]
+  },
+  {
+    "order": "1",
+    "timestamp": 1744118314000,
+    "situation": "Kept rereading an email I sent. Accidentally left my mic on during a call. Felt like I was being micromanaged again.",
+    "thought": "I never get things right.",
+    "behavior": "Didn’t ask any questions.",
+    "emotions": [
+      {
+        "label": "embarrassment",
         "intensity": 6
       }
     ]
   },
   {
-    "timestamp": 1743782770089,
-    "situation": "Woke up and saw I had 12 missed messages from work Slack.",
-    "thought": "I'm falling behind. Everyone is waiting on me. They're annoyed.",
-    "behavior": "Scrolled through them but avoided replying for 2 hours.",
+    "order": "2",
+    "timestamp": 1744143565000,
+    "situation": "Met with someone who didn’t seem to pay attention. Accidentally left my mic on during a call. Felt like I was being micromanaged again.",
+    "thought": "They think I’m incompetent. They lost faith in me. Everyone sees me struggling.",
+    "behavior": "Stayed silent for the rest of the day. Did everything solo instead of asking for help. Turned off camera and said nothing.",
     "emotions": [
-      {
-        "label": "overwhelm",
-        "intensity": 7
-      },
       {
         "label": "guilt",
         "intensity": 5
-      }
-    ]
-  },
-  {
-    "timestamp": 1743782770089,
-    "situation": "Shipped a bug to production and the team had to hotfix it.",
-    "thought": "I'm a terrible engineer. I always ruin things when I'm moving too fast.",
-    "behavior": "Apologized in the thread and muted notifications after.",
-    "emotions": [
-      {
-        "label": "shame",
-        "intensity": 9
       },
       {
-        "label": "embarrassment",
+        "label": "shame",
         "intensity": 7
       }
     ]
   },
   {
-    "timestamp": 1743782770089,
-    "situation": "Got a compliment on my last project during standup.",
-    "thought": "They probably didn't mean it. They're just being polite.",
-    "behavior": "I smiled, but immediately changed the topic.",
+    "order": "3",
+    "timestamp": 1744074772000,
+    "situation": "Got vague feedback again. Kept rereading an email I sent. Tried to speak up but froze.",
+    "thought": "I never get things right. I mess everything up. They lost faith in me.",
+    "behavior": "Didn’t ask any questions. Went for a long walk instead of working. Did everything solo instead of asking for help.",
     "emotions": [
       {
-        "label": "discomfort",
+        "label": "guilt",
         "intensity": 5
       },
       {
-        "label": "doubt",
+        "label": "shame",
+        "intensity": 7
+      }
+    ]
+  },
+  {
+    "order": "4",
+    "timestamp": 1743897911000,
+    "situation": "The team ignored my PR. Kept rereading an email I sent. Slack was quiet all day.",
+    "thought": "I mess everything up.",
+    "behavior": "Stayed silent for the rest of the day. Didn’t ask any questions.",
+    "emotions": [
+      {
+        "label": "self-doubt",
+        "intensity": 9
+      }
+    ]
+  },
+  {
+    "order": "5",
+    "timestamp": 1744141705000,
+    "situation": "Slack was quiet all day. Slack was quiet all day. Felt like I was being micromanaged again.",
+    "thought": "I shouldn’t even be on this project.",
+    "behavior": "Kept re-reading my Slack messages. Stayed silent for the rest of the day.",
+    "emotions": [
+      {
+        "label": "frustration",
         "intensity": 6
+      }
+    ]
+  },
+  {
+    "order": "6",
+    "timestamp": 1743952787000,
+    "situation": "Met with someone who didn’t seem to pay attention.",
+    "thought": "They lost faith in me.",
+    "behavior": "Cancelled a call.",
+    "emotions": [
+      {
+        "label": "guilt",
+        "intensity": 5
+      },
+      {
+        "label": "shame",
+        "intensity": 7
+      }
+    ]
+  },
+  {
+    "order": "7",
+    "timestamp": 1744224667000,
+    "situation": "It was hard to focus the whole afternoon. Felt like I was being micromanaged again.",
+    "thought": "I’m just wasting everyone’s time. This team is way above my level.",
+    "behavior": "Did everything solo instead of asking for help.",
+    "emotions": [
+      {
+        "label": "frustration",
+        "intensity": 6
+      }
+    ]
+  },
+  {
+    "order": "8",
+    "timestamp": 1744185587000,
+    "situation": "Slack was quiet all day. It was hard to focus the whole afternoon.",
+    "thought": "This team is way above my level. They probably talk about me after meetings.",
+    "behavior": "Did everything solo instead of asking for help. Did everything solo instead of asking for help. Turned off camera and said nothing.",
+    "emotions": [
+      {
+        "label": "guilt",
+        "intensity": 5
+      },
+      {
+        "label": "shame",
+        "intensity": 7
+      }
+    ]
+  },
+  {
+    "order": "9",
+    "timestamp": 1744189617000,
+    "situation": "Felt like I was being micromanaged again. Felt like I was being micromanaged again.",
+    "thought": "I’m falling behind.",
+    "behavior": "Overprepared for the next meeting. Did everything solo instead of asking for help.",
+    "emotions": [
+      {
+        "label": "overwhelm",
+        "intensity": 8
+      },
+      {
+        "label": "shame",
+        "intensity": 5
+      }
+    ]
+  },
+  {
+    "order": "10",
+    "timestamp": 1743812097000,
+    "situation": "Slack was quiet all day.",
+    "thought": "I never get things right.",
+    "behavior": "Did everything solo instead of asking for help. Went for a long walk instead of working.",
+    "emotions": [
+      {
+        "label": "fear",
+        "intensity": 6
+      },
+      {
+        "label": "sadness",
+        "intensity": 6
+      }
+    ]
+  },
+  {
+    "order": "11",
+    "timestamp": 1743902857000,
+    "situation": "Tried to speak up but froze. Met with someone who didn’t seem to pay attention.",
+    "thought": "I never get things right. They think I’m incompetent. They lost faith in me.",
+    "behavior": "Stayed silent for the rest of the day. Went for a long walk instead of working.",
+    "emotions": [
+      {
+        "label": "fear",
+        "intensity": 6
+      },
+      {
+        "label": "sadness",
+        "intensity": 6
+      }
+    ]
+  },
+  {
+    "order": "12",
+    "timestamp": 1744213631000,
+    "situation": "Had a rough 1:1 with my manager.",
+    "thought": "I never get things right. This team is way above my level.",
+    "behavior": "Cancelled a call. Kept re-reading my Slack messages.",
+    "emotions": [
+      {
+        "label": "self-doubt",
+        "intensity": 9
+      }
+    ]
+  },
+  {
+    "order": "13",
+    "timestamp": 1743799599000,
+    "situation": "Had a rough 1:1 with my manager. Slack was quiet all day. The team ignored my PR.",
+    "thought": "I’m just wasting everyone’s time. I shouldn’t even be on this project. This team is way above my level.",
+    "behavior": "Rewrote my update five times. Stayed silent for the rest of the day. Didn’t ask any questions.",
+    "emotions": [
+      {
+        "label": "resentment",
+        "intensity": 4
+      }
+    ]
+  },
+  {
+    "order": "14",
+    "timestamp": 1744204845000,
+    "situation": "Met with someone who didn’t seem to pay attention. Felt like I was being micromanaged again. It was hard to focus the whole afternoon.",
+    "thought": "I shouldn’t even be on this project. I mess everything up.",
+    "behavior": "Didn’t ask any questions. Turned off camera and said nothing.",
+    "emotions": [
+      {
+        "label": "frustration",
+        "intensity": 6
+      }
+    ]
+  },
+  {
+    "order": "15",
+    "timestamp": 1743948158000,
+    "situation": "The team ignored my PR.",
+    "thought": "I mess everything up. I’m just wasting everyone’s time.",
+    "behavior": "Kept re-reading my Slack messages. Didn’t ask any questions. Did everything solo instead of asking for help.",
+    "emotions": [
+      {
+        "label": "fear",
+        "intensity": 6
+      },
+      {
+        "label": "sadness",
+        "intensity": 6
+      }
+    ]
+  },
+  {
+    "order": "16",
+    "timestamp": 1743993095000,
+    "situation": "Kept rereading an email I sent. It was hard to focus the whole afternoon.",
+    "thought": "I mess everything up. They probably talk about me after meetings. They probably talk about me after meetings.",
+    "behavior": "Kept re-reading my Slack messages.",
+    "emotions": [
+      {
+        "label": "frustration",
+        "intensity": 6
+      }
+    ]
+  },
+  {
+    "order": "17",
+    "timestamp": 1743923143000,
+    "situation": "Slack was quiet all day. Got vague feedback again. Tried to speak up but froze.",
+    "thought": "They think I’m incompetent. I’m just wasting everyone’s time.",
+    "behavior": "Cancelled a call.",
+    "emotions": [
+      {
+        "label": "overwhelm",
+        "intensity": 8
+      },
+      {
+        "label": "shame",
+        "intensity": 5
+      }
+    ]
+  },
+  {
+    "order": "18",
+    "timestamp": 1743817471000,
+    "situation": "Had a rough 1:1 with my manager.",
+    "thought": "Everyone sees me struggling.",
+    "behavior": "Cancelled a call. Rewrote my update five times.",
+    "emotions": [
+      {
+        "label": "inadequacy",
+        "intensity": 7
+      }
+    ]
+  },
+  {
+    "order": "19",
+    "timestamp": 1743893385000,
+    "situation": "Felt like I was being micromanaged again. Got vague feedback again.",
+    "thought": "I mess everything up. They probably talk about me after meetings. Everyone sees me struggling.",
+    "behavior": "Cancelled a call. Did everything solo instead of asking for help. Did everything solo instead of asking for help.",
+    "emotions": [
+      {
+        "label": "guilt",
+        "intensity": 5
+      },
+      {
+        "label": "shame",
+        "intensity": 7
       }
     ]
   }
