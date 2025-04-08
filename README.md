@@ -6,9 +6,9 @@ Copepilot is a CBT tool to help professionals log stressful thoughts, identify c
 
 ## My oversight
 I use CBT thought records regularly to work through spirals and stuck thoughts. They help, but on paper, its easy to lose patterns, avoid follow up, and stop short of real progress and reflection.
-After demoing, I noticed something that reflects my own habits -- the app stops right before the most important part!!
+After demoing, I noticed something that reflects my own habits: the app stops right before the most important part.
 It identifies thinking patterns, but doesn’t yet guide users through creating a balanced interpretation, re-rating emotion, or planning a next step.
-I am building that next to complete the loop (and to make the reflection actually stick).
+I am building that now to complete the loop and to make the reflection actually stick.
 
 ## Features & Functionality
 - Thought record form following CBT structure (situation, thought, emotion, behavior)
@@ -36,6 +36,6 @@ I am building that next to complete the loop (and to make the reflection actuall
   Log original thought, identified distortion, reframed belief, updated emotion rating, and planned behavior.
 
 - **Generate insights on reframes**  
-With these new steps, CopePilot will actually be able to help users break the pattern.
+  Once the full loop is captured, Copepilot can surface long-term trends in reframing success and emotional flexibility.
 
 **Note:** Due to Foundry Dev Tier limitations, this demo uses a mocked backend. All pipelines and ontology actions are wired and functional in Foundry.
