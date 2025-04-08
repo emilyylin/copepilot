@@ -6,14 +6,14 @@ Copepilot is a tool to help professionals log stressful thoughts, identify cogni
 It's built on a Next.js frontend, with Foundry powering LLM extraction, embeddings, semantic search, and insights.
 
 ## My oversight
-I use CBT thought records regularly to work through spirals and stuck thoughts. They help, but on paper, its easy to lose patterns, avoid follow-up, and stop short of real progress and reflection.
+I use CBT thought records regularly to work through spirals and stuck thoughts. They help, but on paper, its easy to lose patterns, avoid follow up, and stop short of real progress and reflection.
 After demoing, I noticed something that reflects my own habits -- the app stops right before the most important part!!
 It identifies thinking patterns, but doesn’t yet guide users through creating a balanced interpretation, re-rating emotion, or planning a next step.
-I am building that next to complete the loop (and to make the reflection actually stick)
+I am building that next to complete the loop (and to make the reflection actually stick).
 
 ## Features & Functionality
 - Thought record form following CBT structure (situation, thought, emotion, behavior)
-- Foundry pipeline extracts distortions & core beliefs using `use_llm`
+- Foundry pipeline extracts cognitive distortions & core beliefs using `use_llm`
 - Embeddings + KNN used for retrieval-augmented generation in chat
 - Insight graphs for emotional and cognitive trends over time
 
@@ -23,10 +23,10 @@ I am building that next to complete the loop (and to make the reflection actuall
 ## Next Steps
 - **Add Responsibility Pie feature**  
   Helps users break down perceived responsibility across people, systems, and external factors.  
-  Useful for challenging over-personalization distortions.
+  Useful for challenging personalization distortions.
 
 - **Extend chatbot to support full CBT reframing**  
-  After identifying a distortion, prompt the user to:
+  After identifying a distortion, prompt the user by asking:
   - What evidence supports this thought?
   - What evidence challenges it?
   - What’s a more balanced interpretation?
@@ -37,8 +37,6 @@ I am building that next to complete the loop (and to make the reflection actuall
   Log original thought, identified distortion, reframed belief, updated emotion rating, and planned behavior.
 
 - **Generate insights on reframes**  
-  - Track which distortions are most difficult to reframe
-  - Measure emotional change before/after reframing
-  - Identify common themes in successful reframes
+With these new steps, CopePilot will actually be able to help users break the pattern.
 
 **Note:** Due to Foundry Dev Tier limitations, this demo uses a mocked backend. All pipelines and ontology actions are wired and functional in Foundry.
