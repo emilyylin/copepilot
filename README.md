@@ -2,8 +2,7 @@
 
 **Video Demo:**  [https://youtu.be/a_SglgeEVGc]
 
-Copepilot is a tool to help professionals log stressful thoughts, identify cognitive distortions, and reflect with the support of an LLM-powered chatbot.  
-It's built on a Next.js frontend, with Foundry powering LLM extraction, embeddings, semantic search, and insights.
+Copepilot is a CBT tool to help professionals log stressful thoughts, identify cognitive distortions, and reflect with the support of an LLM-powered chatbot.  
 
 ## My oversight
 I use CBT thought records regularly to work through spirals and stuck thoughts. They help, but on paper, its easy to lose patterns, avoid follow up, and stop short of real progress and reflection.
