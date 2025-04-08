@@ -17,8 +17,8 @@ I am building that next to complete the loop (and to make the reflection actuall
 - Embeddings + KNN used for retrieval-augmented generation in chat
 - Insight graphs for emotional and cognitive trends over time
 
-- **Frontend:** Next.js + TypeScript
-- **Backend:** Foundry & AIP (but typescript for my mock backend)
+**Frontend:** Next.js + TypeScript
+**Backend:** Foundry & AIP (but typescript for my mock backend)
 
 ## Next Steps
 - **Add Responsibility Pie feature**  
