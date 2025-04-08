@@ -1,4 +1,4 @@
-# Copepilot — A CBT-style Reflection Assistant for Professionals
+# CopePilot — A CBT-style Reflection Assistant for Professionals
 
 **Video Demo:**  [https://youtu.be/a_SglgeEVGc]
 
